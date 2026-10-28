@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KANLI KURULTAY — Arena</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<div id="login" class="screen">
+  <div class="brand"><div class="crest">⚔</div><div><div class="eyebrow">ÇOK OYUNCULU ORTA ÇAĞ ARENASI</div><h1>IRON<span>CLASH</span></h1></div></div>
+  <div class="login-card"><div class="eyebrow gold">KURULTAY SENİ BEKLİYOR</div><h2>Arenada adını duyur.</h2><p>Miğferini tak. Kılıcını kuşan. Arenaya gir.</p>
+    <label for="nickname">SAVAŞÇI ADI</label><input id="nickname" maxlength="16" placeholder="Örn. KaraŞövalye" autocomplete="nickname">
+    <button id="enter">ARENAYA GİR <span>→</span></button><div class="fine">ÜCRETSİZ OYNA · TARAYICIDA · ÇOK OYUNCULU</div>
+  </div>
+  <div class="login-foot">SEZON I <b>◆</b> DEMİR VE ONUR</div>
+</div>
+<div id="game" class="hidden">
+  <div id="gameCanvas"></div>
+  <header class="topbar"><div class="mini-brand"><span>⚔</span> KANLI KURULTAY</div><div class="server"><i></i> ARENA-01 <span id="onlineCount">1 SAVAŞÇI</span></div><button id="leave" class="ghost">MENÜYE DÖN ↗</button></header>
+  <div class="hud-top"><div class="mode"><small>OYUN MODU</small><strong>SON AYAKTA KALAN</strong><span>DEMİR ARENASI · SERBEST DÖVÜŞ</span></div><div class="timer"><small>MAÇ DURUMU</small><strong id="matchStatus">SAVAŞ BAŞLADI</strong></div></div>
+  <div class="crosshair">+</div>
+  <div class="hud-bottom"><div class="health"><div class="health-head"><span>CAN</span><strong id="hpText">100 / 100</strong></div><div class="bar"><i id="hpBar"></i></div><div class="weapon">⚔ <span>UZUN KILIÇ</span><small>VURUŞ: 34</small></div></div><div class="controls"><span><kbd>W A S D</kbd> HAREKET</span><span><kbd>FARE</kbd> BAKIŞ</span><span><kbd>SOL TIK</kbd> SALDIR</span><span><kbd>ESC</kbd> MENÜ</span></div></div>
+  <aside class="leaderboard"><div class="board-title">⚑ ARENA LİSTESİ</div><div id="playersList"></div></aside>
+  <div id="feed" class="feed"></div><div id="toast" class="toast">Arenaya hoş geldin!</div>
+  <div id="death" class="death hidden"><div>☠</div><h2>YERE SERİLDİN</h2><p>Yeni bir başlangıç yakında...</p></div>
+</div>
+<script src="/socket.io/socket.io.js"></script><script type="module" src="/game.js"></script></body></html>
